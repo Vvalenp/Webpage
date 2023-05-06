@@ -45,36 +45,6 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script>
-    $(document).ready(function(){
-      $('.thumbnail-images img').click(function(){
-        $('.main-image img').attr('src', $(this).attr('src'));
-      });
-      $('.thumbnail-images').slick({
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        dots: false,
-        centerMode: true,
-        focusOnSelect: true,
-        arrows: false,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 3
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              centerMode: false
-            }
-          }
-        ]
-      });
-    });
-
-
     const images = document.querySelectorAll('.thumbnail-images img');
 
     images.forEach((img) => {
