@@ -48,9 +48,19 @@
     const images = document.querySelectorAll('.thumbnail-images img');
 
     images.forEach((img) => {
-        const image = new Image();
-        image.src = img.src;
-    });
+  img.addEventListener('click', cambiarImagen);
+});
+
+
+function cambiarImagen(event) {
+  var imagen = event.target;
+  var url = imagen.getAttribute('src');
+  var mainImagen = document.querySelector('.main-image img'); // seleccionar la imagen dentro del contenedor
+  mainImagen.setAttribute('src', url);
+}
+
+
+
 
   </script>
 </body>
