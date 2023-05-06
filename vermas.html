@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre de la marca</title>
+    <link rel="stylesheet" href="vermas.css">
+</head>
+<body>
+    <header class="header ver-mas">
+        <div class="brandname-contacto">
+          <h1>Nombre de marca</h1>
+        </div>
+        <div class="contacto">
+          <ul>
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="Productos.html">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </header>      
+  <section class="ver-mas-producto">
+    <div class="grid-container">
+      <div class="product-images">
+        <div class="main-image">
+          <img src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662655033/Croma%20Assets/Communication/Mobiles/Images/261983_ppxi5n.png/mxw_2048,f_auto" alt="Product 1">
+        </div>
+        <div class="thumbnail-images">
+          <img src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662655033/Croma%20Assets/Communication/Mobiles/Images/261983_ppxi5n.png/mxw_2048,f_auto" alt="Product 1 Thumbnail 1">
+          <img src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662655029/Croma%20Assets/Communication/Mobiles/Images/261983_4_mod9ul.png/mxw_2048,f_auto" alt="Product 1 Thumbnail 2">
+          <img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/LTRHIUFKX5CQXOPQSLNEW5JT4I.jpg" alt="Product 1 Thumbnail 3">
+          <img src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662655034/Croma%20Assets/Communication/Mobiles/Images/261983_10_u6u954.png/mxw_2048,f_auto" alt="Product 1 Thumbnail 4">
+          <img src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662655035/Croma%20Assets/Communication/Mobiles/Images/261983_13_eybtqe.png/mxw_2048,f_auto" alt="Product 1 Thumbnail 5">
+        </div>
+      </div>
+      <div class="product-info">
+        <h2>Nombre del producto</h2>
+        <h3>Precio: $XXX</h3>
+        <p>Descripción del producto aquí.</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.thumbnail-images img').click(function(){
+        $('.main-image img').attr('src', $(this).attr('src'));
+      });
+      $('.thumbnail-images').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        dots: false,
+        centerMode: true,
+        focusOnSelect: true,
+        arrows: false,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              centerMode: false
+            }
+          }
+        ]
+      });
+    });
+  </script>
+</body>
+</html>
